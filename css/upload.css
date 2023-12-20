@@ -1,0 +1,68 @@
+@font-face {
+  font-family: "sub";
+  src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: "main";
+  src: url('../font/DancingScript-VariableFont_wght.ttf');
+}
+
+* {
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: black;
+}
+
+body {
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  font-family: sub;
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "main";
+  position: absolute;
+  top: 0;
+  left: 312px;
+  font-family: main;
+}
+
+
+
+h2, input, button, p {
+  top: 20px; /* 수정: 메시지를 화면 상단에 표시하기 위해 top 값 변경 */
+  font-family: sub;
+}
+
+h1 > a {
+  font-family: "main";
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  margin: 10px;
+}
+
+button {
+  padding: 2px;
+  font-size: 15px;
+  margin: 10px;
+  box-shadow: none;
+  border: 2px solid white;
+  background-color: white;
+  color: black; /* 수정: 글씨 색을 검은색으로 변경 */
+}

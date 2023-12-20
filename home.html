@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ko">
+  
+  <head>
+    
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fileload</title>
+
+  </head>
+  <body>
+   
+    <div class="wrap">
+     
+        <div class="header">
+          <div class="name">
+            <h1><a href="home.html">My Music</a></h1>
+          </div>
+          <ul class="nav" id="navList">
+            <li><a href="upload.html">Upload</a></li>
+            <li><a href="login.html">Login</a></li>
+          </ul>
+        </div>
+        <div class="intro_text">
+          <h1>My Music</h1>
+          <h4 class="contents1">Create a playlist you desire</h4><br>
+        </div>
+    </div>
+    <div class="searchbox">
+         <div class="header">
+           
+           <input onkeyup="filter()" type="text" id="value" placeholder="원하는 가수나 노래를 검색하세요">
+         </div>
+    </div>
+      <div class="image-grid">
+        <div class="image-container">
+          <a href="playlist.html?initialSong=0">
+            <img src="images/photo-1-min.jpg" alt="Image 1">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              IU - SQUARE
+            </div>
+            <div class="buttons">
+              <a href="playlist.html?initialSong=0" class="listen-button">노래 듣기</a>
+              <a href="#" onclick="playMusic('voices/IuVoice.mp3')" class="add-button">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <a href="playlist.html?initialSong=1">
+            <img src="images/photo-2-min.jpg" alt="Image 2">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              JungKook - Elemental
+            </div>
+            <div class="buttons">
+            <a href="playlist.html?initialSong=1">노래 듣기</a>
+            <a href="#" onclick="playMusic('voices/JungVoice.mp3')" class="add-button">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <a href="playlist.html?initialSong=2">
+            <img src="images/photo-3-min.jpg" alt="Image 3">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              GD - DVancouver
+            </div>
+            <div class="buttons">
+            <a href="playlist.html?initialSong=2">노래 듣기</a>
+            <a href="#" onclick="playMusic('voices/GdVoice.mp3')" class="add-button">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <a href="playlist.html?initialSong=3">
+            <img src="images/photo-4-min.jpg" alt="Image 4">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              Yun - 헤어지자 말해요
+            </div>
+            <div class="buttons">
+            <a href="playlist.html?initialSong=3">노래 듣기</a>
+            <a href="#" onclick="playMusic('voices/YunVoice.mp3')" class="add-button">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <a href="playlist.html?initialSong=4">
+            <img src="images/photo-5-min.jpg" alt="Image 5">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              MOM - MOM
+            </div>
+            <div class="buttons">
+            <a href="playlist.html?initialSong=4">노래 듣기</a>
+            <a href="#">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        <div class="image-container">
+          <a href="playlist.html?initialSong=5">
+            <img src="images/photo-6-min.jpg" alt="Image 6">
+          </a>
+          <div class="info">
+            <div class="song-info" id="songInfo">
+              Yunha - 밤편지
+            </div>
+            <div class="buttons">
+            <a href="playlist.html?initialSong=5">노래 듣기</a>
+            <a href="#">목소리 듣기</a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+
+      <audio id="audioPlayer" controls style="display: none;" >
+        <!-- 이 부분은 사용자가 브라우저의 플레이어를 통해 재생할 수 있도록 제공합니다. -->
+      </audio>
+
+
+      <script src="js/home.js"></script>
+      <script src="js/music_list.js"></script>
+      <script>
+        function playMusic(mp3Path) {
+          // HTML5 audio 요소를 얻습니다.
+          var audioPlayer = document.getElementById('audioPlayer');
+    
+          // MP3 파일 경로를 설정합니다.
+          audioPlayer.src = mp3Path;
+    
+          // 재생합니다.
+          audioPlayer.play();
+        }
+      </script>
+    
+      
+    </body>
+
+</html>
+

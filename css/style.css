@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "sub";
+  src: url('../font/NotoSansKR-VariableFont_wght.ttf');
+}
+
+@font-face {
+  font-family: "main";
+  src: url('../font/DancingScript-VariableFont_wght.ttf');
+}
+
+*{
+  font-family: 'sub';
+  list-style: none;
+  text-decoration: none;
+  border-collapse: collapse;
+  margin:0px;
+  padding: 0px;
+  color: white;
+  background-color: black;
+}
+
+
+h1,
+h1 > a {
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "main";
+}
+
+
+.contents1{
+  font-size: 20px;
+  font-weight: lighter;
+  font-family: "sub";
+}
+.contents2{
+  font-size: 18px;
+}
+.contents3 {
+  font-size: 14px;
+  font-weight: 100;
+}
+.contents1_bold{
+  font-size: 18px;
+  font-weight: bold;
+}
+/* --- */
+
+.result{
+  font-size: 24px;
+}
+
+
+
+.header{
+  width:1280px;
+  margin:auto;
+  display:flex;
+  height: 55px;
+}
+
+
+#value{
+  border: none;
+  border: 1px solid white;
+  background:black;
+  padding: 6px;
+  font-size: 18px;
+  width: 60%;
+  border-radius: 6px;
+  color: white;
+}
+#value:focus{
+  outline: none;
+}
+
+.nav{
+  display: flex;
+  justify-content: flex-end;
+  width:calc(1280px - 300px);
+  line-height: 86px;
+}
+.nav > li {
+  margin-left:84px;
+}
+
+.nav > li > a {
+  color: #fff;
+}
+
+.intro_text{
+  margin-top: 40px;
+  text-align: center;
+  margin-bottom: 20px;
+
+}
+
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));;
+  gap: 20px;
+  max-width: 1280px;
+  width: 100%;
+  margin: 0 auto; 
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+}
+
+.image-grid a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+
+.image-grid > a > img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+
+}
+
+
+.image-container {
+  width: 100%; /* 이미지 컨테이너의 크기를 100%로 유지 */
+  max-width: 95%; /* 각 이미지 컨테이너의 최대 너비를 설정하며, 여기서는 그리드 간격을 고려하여 조정 */
+  position: relative;
+}
+
+.image-container:last-child {
+  margin-right: 0; /* 마지막 이미지 컨테이너의 오른쪽 여백을 제거 */
+}
+
+.image-container img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  transition: filter 0.5s;
+}
+
+.buttons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: transparent;
+}
+
+.buttons a {
+  display: inline-block;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  margin: 5px;
+  text-decoration: none;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.buttons a:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.image-container:hover img {
+  filter: blur(5px);
+}
+
+.image-container:hover .buttons {
+  opacity: 1;
+}
+
+.image-container:hover .song-info {
+  opacity: 1;
+   
+}
+
+.song-info {
+  position: absolute;
+  top: calc(50% - 110px); /* 버튼 아래에 위치하도록 조절합니다. */
+  left: 50%;
+  transform: translate(-50%, 0);
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 10px;
+  border-radius: 8px;
+  color: #fff;
+  z-index: 1;
+  background-color: transparent;
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  font-family: "main";
+}
+.searchbox{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 10px auto;
+
+}
+
+
+
+.header {
+    background: #000000;
+    overflow: hidden;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+.header h1{
+  text-transform: uppercase;
+  color: white;
+  margin: 0;
+}
+
+.container{
+  background: #FFFFF5;
+
+}
+.item{
+  margin: 3% 0px;
+  display: flex;
+  align-items: center;
+}
+.icon{
+  width: 25px;
+  height: 25px;
+  background: #E0D3B6;
+  color: white;
+  font-size: 15px;
+  text-align: center;
+  line-height: 25px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.name{
+  
+  font-size: 48px;
+  font-weight: 100;
+  font-family: "main";
+}

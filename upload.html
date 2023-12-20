@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="css/upload.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 업로드</title>
+</head>
+<body>
+    <div class="name">
+        <h1><a href="home.html">My Music</a></h1>
+    </div>  
+    <h2>파일 업로드</h2></br>
+    <input type="file" id="fileInput" />
+    <button onclick="uploadFile()">파일 업로드</button>
+    <p id="uploadStatus"></p>
+
+    <script>
+        function uploadFile() {
+            var fileInput = document.getElementById('fileInput');
+            var uploadStatus = document.getElementById('uploadStatus');
+
+            // 파일이 선택되었는지 여부 확인
+            if (fileInput.files.length > 0) {
+                // 로딩 메시지 표시
+                uploadStatus.innerText = '로딩중입니다...';
+
+                // 일정 시간 후에 파일 업로드 성공 메시지 표시
+                setTimeout(function() {
+                    // 파일 업로드 성공 알람 표시
+                    alert('파일 업로드 성공. 작업 소요는 2일 예상합니다.');
+                    
+                    // 알람이 닫힌 후 초기 상태로 돌아가기
+                    uploadStatus.innerText = '';
+                    fileInput.value = ''; // 업로드한 파일 초기화
+                }, 2000); // 2초 후에 메시지 변경 (실제로는 파일 업로드 로직 대신 사용)
+            } else {
+                alert('파일을 먼저 선택하세요.');
+            }
+        }
+    </script>
+</body>
+</html>
